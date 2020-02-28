@@ -14,15 +14,14 @@ body {
   background-color: $maincolor;
 }
 
-/*................Mobile first...................*/
-/* On screens that are less than 400px wide, make the sidebar into a topbar */
-@media screen and (max-width: 400px) {
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 800px) {
   /*................Header...................*/
   .RamenHeader {
     text-align: center;
     text-decoration: none;
-	background-color: $seccolor;
-	margin-top: -21px;
+    background-color: $seccolor;
+    margin-top: -21px;
   }
 
   a:link {
@@ -33,44 +32,57 @@ body {
     color: $textcolor;
   }
 
+  /*................Content...................*/
+  img {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
   /*................Footer...................*/
   .RamenFooter {
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-	height: 2.5rem;
-	background-color: $seccolor;
-	color: $textcolor;
+    height: 2.5rem;
+    background-color: $seccolor;
+    color: $textcolor;
   }
 }
-  /* On screens that are less than 800px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 800px) {
-	/*................Header...................*/
-	.RamenHeader {
-	  text-align: center;
-	  text-decoration: none;
-	  background-color: $seccolor;
-	  margin-top: -21px;
-	}
-  
-	a:link {
-	  text-decoration: none;
-	}
-  
-	a:visited {
-	  color: $textcolor;
-	}
-  
-	/*................Footer...................*/
-	.RamenFooter {
-	  text-align: center;
-	  position: absolute;
-	  bottom: 0;
-	  width: 100%;
-	  height: 2.5rem;
-	  background-color: $seccolor;
-	  color: $textcolor;
-	}
-}
 
+/*................Mobile first...................*/
+/* On screens that are less than 400px wide, make the sidebar into a topbar */
+@media screen and (max-width: 400px) {
+  /*................Header...................*/
+  .RamenHeader {
+    text-align: center;
+    text-decoration: none;
+    background-color: $seccolor;
+    margin-top: -21px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $textcolor;
+  }
+
+  /*................Content...................*/
+  img {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
+  /*................Footer...................*/
+  .RamenFooter {
+    text-align: center;
+    height: 2.5rem;
+    background-color: $seccolor;
+    color: $textcolor;
+  }
+}
