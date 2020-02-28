@@ -4,7 +4,6 @@ import "./index.scss";
 
 export function RamenHeader(props) {
     return <div className="RamenHeader">
-        <li><a href="http://localhost:3000">Home</a></li>
-        <h1>Ramen recipes</h1>
+        <h1><a href="http://localhost:3000">Ramen recipes</a></h1>
     </div>
 }

@@ -1,18 +1,76 @@
-// color 1: #802200
-// color 2: #FF875C
-// color 3: #FF4400
+// @import '~bulma/bulma.sass';
+$maincolor: #ff875c;
+$seccolor: #802200;
+$textcolor: #ff4400;
 // color 4: #856F67
 // color 5: #CC3600
 
-body{
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-}
+/* #=id .=class */
 
+body {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: $maincolor;
+}
 
 /*................Mobile first...................*/
 /* On screens that are less than 400px wide, make the sidebar into a topbar */
 @media screen and (max-width: 400px) {
-    
+  /*................Header...................*/
+  .RamenHeader {
+    text-align: center;
+    text-decoration: none;
+	background-color: $seccolor;
+	margin-top: -21px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $textcolor;
+  }
+
+  /*................Footer...................*/
+  .RamenFooter {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	height: 2.5rem;
+	background-color: $seccolor;
+	color: $textcolor;
+  }
 }
+  /* On screens that are less than 800px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 800px) {
+	/*................Header...................*/
+	.RamenHeader {
+	  text-align: center;
+	  text-decoration: none;
+	  background-color: $seccolor;
+	  margin-top: -21px;
+	}
+  
+	a:link {
+	  text-decoration: none;
+	}
+  
+	a:visited {
+	  color: $textcolor;
+	}
+  
+	/*................Footer...................*/
+	.RamenFooter {
+	  text-align: center;
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  height: 2.5rem;
+	  background-color: $seccolor;
+	  color: $textcolor;
+	}
+}
+
