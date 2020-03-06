@@ -4,16 +4,10 @@ import "./index.scss";
 
 export function RamenPork(props) {
     return <div className="RamenPork">
+        https://www.ica.se/recept/ramensoppa-med-flask-och-agg-721076/
         <li><a rel="group"><img src="img/PorkRamen.jpg" /></a></li>
         <h3>Ingredients:</h3>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
-        <li><a>wejr</a></li>
+
 
         <h3>Instructions</h3>
         <li><a>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
@@ -24,9 +18,9 @@ export function RamenPork(props) {
                 nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
                  vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" 1914 translation by H. Rackham</a></li>
 
-        <textarea class="comment-area" placeholder="Comment on recipe"></textarea>
+        <textarea className="comment-area" placeholder="Comment on recipe"></textarea>
 
-        <a class="button button">Button</a>
+        <a className="button button">Button</a>
            
        
 

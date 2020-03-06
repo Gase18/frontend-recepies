@@ -1,21 +1,26 @@
 import React from "react";
 import "./index.scss";
-import { RamenHeader } from "./RamenHeader";
+import {getRecipeData} from "./RamenData";
+
 
 
 
 export function RamenStart(props) {
 
-    function gotoRamenchicken(){
+   async function gotoRamenchicken(){
+        const rData = await getRecipeData();
+        props.settData(rData);
         props.navigate(1);
     }
-    function gotoRamenPork(){
+
+    async function gotoRamenPork(){
         props.navigate(2);
     }
-    function gotoRamenGarlic(){
+
+    async function gotoRamenGarlic(){
         props.navigate(3);
     }
-
+    
     return <div className="RamenStart">
         <li><a rel="group"><img src="img/ChickenRamen.jpg" onClick={gotoRamenchicken}/></a></li>
         <li><a rel="group"><img src="img/PorkRamen.jpg" onClick={gotoRamenPork}/></a></li>
