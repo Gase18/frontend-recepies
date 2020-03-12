@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
-import {getRecipeData} from "./RamenData";
+import {getRecipeData} from "./RamenRecipeData";
+import {getIngredientData} from "./getIngredientData";
 
 
 
@@ -9,6 +10,8 @@ export function RamenStart(props) {
 
    async function gotoRamenchicken(){
         const rData = await getRecipeData();
+        const iData = await getIngredientData();
+        props.settData(iData);
         props.settData(rData);
         props.navigate(1);
     }
