@@ -10,23 +10,22 @@ import { RamenFooter } from "./RamenFooter";
 
 export function RamenNavigate(props) {
     const [pageId, setPageId] = React.useState(0);
-    const [settCurrentData, currentData] = React.useState(undefined);
+    const [currentData, settCurrentData] = React.useState(undefined);
 
     function navigate(id) {
-        console.log(`Navigate: ${id}`)
         setPageId(id);
     }
 
     let CurrentPage = null;
     if (pageId === 0) {
 
-        CurrentPage = <RamenStart navigate={navigate} settData={settCurrentData} />
+        CurrentPage = <RamenStart navigate={navigate} setData={settCurrentData} />
     } else if (pageId === 1) {
-        CurrentPage = <RamenChicken navigate={navigate} thisData={currentData} />
+        CurrentPage = <RamenPork navigate={navigate} Data={currentData} />
     } else if (pageId === 2) {
-        CurrentPage = <RamenPork navigate={navigate} />
+        CurrentPage = <RamenChicken navigate={navigate} Data2={currentData}/>
     } else if (pageId === 3) {
-        CurrentPage = <RamenGarlic navigate={navigate} />
+        CurrentPage = <RamenGarlic navigate={navigate} Data3={currentData} />
     }
     return <div><RamenHeader />{CurrentPage}<RamenFooter /></div>
 }
