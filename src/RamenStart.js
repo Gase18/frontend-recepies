@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { getRecipeData, getRecipeData2, getRecipeData3 } from "./RamenRecipeData";
+import { getRecipeData } from "./RamenRecipeData";
 import { getIngredientData, getIngredientData2, getIngredientData3} from "./RamenIngredientData";
 
 
@@ -11,7 +11,7 @@ export function RamenStart(props) {
 
     async function gotoRamenPork() {
         const iData = await getIngredientData();
-        const rData = await getRecipeData();
+        const rData = await getRecipeData(1);
         props.setrData(rData);
         props.setiData(iData);
         props.navigate(1);
@@ -19,7 +19,7 @@ export function RamenStart(props) {
 
     async function gotoRamenchicken() {
         const iData = await getIngredientData2();
-        const rData = await getRecipeData2();
+        const rData = await getRecipeData(2);
         props.setrData(rData);
         props.setiData(iData);
         props.navigate(2);
@@ -28,7 +28,7 @@ export function RamenStart(props) {
 
     async function gotoRamenGarlic() {
         const iData = await getIngredientData3();
-        const rData = await getRecipeData3();
+        const rData = await getRecipeData(3);
         props.setrData(rData);
         props.setiData(iData);
         props.navigate(3);
