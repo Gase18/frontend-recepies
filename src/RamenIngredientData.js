@@ -2,6 +2,10 @@
  * Get data from database
  */
 let url = "/RamenRecipes/resources";
+
+//Samma sak gäller här som i RamenRecipeData
+//dessa tre funktioner borde vara en och samma
+
 export async function getIngredientData() {
     let result = await fetch(url + "/recipe_has_ingredients/1", {
         method: "GET"
